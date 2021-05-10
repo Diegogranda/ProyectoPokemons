@@ -8,7 +8,12 @@ class Tecnicas:
 
 
     def verTecnica(self):
-        print(self.nombre)
-        print(self.danyo)
-        print(" ")
+        print("Habilidad: ",self.nombre)
+        print("Realiza",str(self.danyo) + " puntos de daño")
+        print("")
+
+    def getdanyo(self):
+        return self.danyo
+
+
 
