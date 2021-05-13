@@ -1,6 +1,3 @@
-from Tecnicas import Tecnicas
-
-
 
 class Personajes:
 
@@ -15,10 +12,10 @@ class Personajes:
         self.tecnicas = tecnicas
 
     def getNombre(self):
-        return (self.nombre)
+        return self.nombre
 
     def getVida(self):
-        return (str(self.vida) +" puntos de vida" )
+        return str(self.vida) + " puntos de vida"
 
     def getvidaint(self):
         return (self.vida)

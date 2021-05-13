@@ -3,9 +3,12 @@ from Tecnicas import Tecnicas
 from Personajes import Personajes
 
 
+'''def turno/jugador, IA, movimiento):
+while 1>movimiento>2:
+   movimiento = int(input("Elige 1 o 2"))'''
 def turno(jugador, IA, movimiento):
     habilidad = jugador.tecnicas[movimiento-1]
-    print(jugador.getNombre(), "Has elegido la habilidad", habilidad.nombre)
+    print(jugador.getNombre(), "Has usado la habilidad", habilidad.nombre)
     IA.setvida(habilidad.getdanyo())
     IA.vervidaactual()
 
@@ -13,7 +16,7 @@ def turno(jugador, IA, movimiento):
 def turnoIA(IA, jugador):
     indice = random.randint(1,len(IA.tecnicas))
     movimiento= IA.tecnicas[indice-1]
-    print(IA.getNombre(), ", la inteligencia artificial contrincante ha elegido la habilidad :", movimiento.nombre)
+    print(IA.getNombre(), ", la inteligencia artificial contrincante ha usado la habilidad :", movimiento.nombre)
     jugador.setvida(movimiento.getdanyo())
     jugador.vervidaactual()
 
@@ -53,13 +56,7 @@ Personajes = [Personaje1,Personaje2, Personaje3, Personaje4, Personaje5]
 
 
 def menu():
-    """
 
-    Función que limpia la pantalla y muestra nuevamente el menu
-
-    """
-
-   # os.system('cls')
 
     print(" Selecciona tu personaje para el combate")
 
@@ -100,7 +97,7 @@ while y== 0:
         confirmacionpersonaje()
         input()
         jugador1 = Personajes[x]
-        Personajes.pop(x, )
+        Personajes.pop(x)
         enemi= random.choice(Personajes)
         print("La inteligencia artificial está eligiendo un personaje...")
         input()
@@ -122,12 +119,6 @@ while y== 0:
             if jugador1.getvidaint() <= 0:
                 print("El enemigo ha ganado el combate")
                 y = 1
-
-
-
-
-
-
 
 
     elif opcionMenu == "9":
